@@ -1,38 +1,160 @@
-.App {
+/* App.css */
+
+body {
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding: 20px;
+}
+
+/* Header styles */
+.MuiAppBar-root {
+  background-color: #1976d2;
+}
+
+/* Dashboard styles */
+.dashboard-card {
+  padding: 20px;
   text-align: center;
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.dashboard-card h6 {
+  margin-bottom: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.dashboard-card h4 {
+  font-size: 2.2rem; /* Reduced from 2.5rem */
+  font-weight: bold;
+  word-wrap: break-word; /* Added to prevent text overflow */
+}
+
+/* Table styles */
+.MuiTableContainer-root {
+  margin-top: 20px;
+  background-color: white;
+}
+
+.MuiTableHead-root .MuiTableCell-root {
+  font-weight: bold;
+  background-color: #f5f5f5;
+}
+
+.MuiTableBody-root .MuiTableRow-root:nth-of-type(even) {
+  background-color: #f9f9f9;
+}
+
+/* Form styles */
+.MuiTextField-root {
+  margin-bottom: 15px;
+}
+
+/* Button styles */
+.MuiButton-containedPrimary {
+  background-color: #1976d2;
+}
+
+.MuiButton-containedSecondary {
+  background-color: #dc004e;
+}
+
+/* Typography styles */
+h4.MuiTypography-root {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Low stock warning */
+.low-stock-warning {
+  color: #f44336;
+  font-weight: bold;
+}
+
+/* Profit text */
+.profit-text {
+  color: #4caf50;
+}
+
+.loss-text {
+  color: #f44336;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .MuiContainer-root {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .dashboard-card h4 {
+    font-size: 1.8rem; /* Further reduce for smaller screens */
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Purchase History styles */
+.purchase-history-filters {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.purchase-history-filters .MuiTextField-root {
+  flex: 1;
+  min-width: 200px;
+}
+
+.purchase-history-table .MuiTableCell-root {
+  padding: 12px 16px;
+}
+
+/* Improve table readability */
+.MuiTableBody-root .MuiTableRow-root:hover {
+  background-color: #f0f0f0;
+}
+
+/* Improve form layout */
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Improve button spacing */
+.MuiButton-root {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+/* Improve header button visibility */
+.MuiAppBar-root .MuiButton-root {
   color: white;
+  margin-right: 5px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .MuiContainer-root {
+    padding-left: 10px;
+    padding-right: 10px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .dashboard-card h4 {
+    font-size: 1.8rem; /* Reduced further for smaller screens */
+  }
+
+  .purchase-history-filters {
+    flex-direction: column;
+  }
+
+  .purchase-history-filters .MuiTextField-root {
+    width: 100%;
+  }
+
+  .MuiTableCell-root {
+    padding: 8px;
   }
 }

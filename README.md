@@ -1,70 +1,156 @@
-# Getting Started with Create React App
+<h1>Hardware Shop Management System</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h2>Overview</h2>
+<p>This application is a comprehensive management system for a hardware shop, providing features for inventory management, sales tracking, purchase management, and financial reporting.</p>
 
-## Available Scripts
+<h2>Features</h2>
+<ul>
+  <li>User Authentication</li>
+  <li>Dashboard with Real-time Updates</li>
+  <li>Product Management</li>
+  <li>Sales and Purchase Tracking</li>
+  <li>Low Stock Alerts</li>
+  <li>Tax Reporting</li>
+</ul>
 
-In the project directory, you can run:
+<h2>Directory Structure</h2>
+<pre>
+hardware-shop/
+├── .git/
+├── .idea/
+├── public/
+│   ├── favicon.ico.png
+│   ├── index.html
+│   ├── logo192.png
+│   ├── logo512.png
+│   ├── manifest.json
+│   └── robots.txt
+├── src/
+│   ├── components/
+│   │   ├── api.js
+│   │   ├── AuthContext.js
+│   │   ├── Dashboard.js
+│   │   ├── Header.js
+│   │   ├── Login.js
+│   │   ├── LowStockProducts.js
+│   │   ├── ProductForm.js
+│   │   ├── ProductList.js
+│   │   ├── PurchaseForm.js
+│   │   ├── PurchaseHistory.js
+│   │   ├── SoldProduct.js
+│   │   └── TaxManagement.js
+│   ├── App.css
+│   ├── App.js
+│   ├── App.test.js
+│   ├── index.css
+│   ├── index.js
+│   ├── logo.svg
+│   ├── reportWebVitals.js
+│   └── setupTests.js
+├── .gitignore
+├── app.py
+├── get_directory_structure.py
+├── package-lock.json
+├── package.json
+└── README.md
+</pre>
 
-### `npm start`
+## Requirements
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Backend
+- Python 3.7+
+- Flask
+- Flask-SQLAlchemy
+- Flask-CORS
+- Flask-JWT-Extended
+- Werkzeug
+- psycopg2-binary
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Frontend
+- Node.js 14+
+- React 18+
+- Material-UI
+- Axios
+- React Router DOM
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Backend Setup
 
-### `npm run build`
+1. Navigate to the project root directory:
+`cd hardware-shop`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Create a virtual environment:
+`python -m venv venv`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Activate the virtual environment:
+- On Windows:
+`venv\Scripts\activate`
+- On macOS and Linux:
+`source venv/bin/activate`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Install the required Python packages:
+`pip install flask flask-sqlalchemy flask-cors flask-jwt-extended werkzeug psycopg2-binary`
 
-### `npm run eject`
+5. Set up your PostgreSQL database and update the database URI in `app.py`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Frontend Setup
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Make sure you have Node.js installed on your system.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. Navigate to the project root directory:
+`cd hardware-shop`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. Install the required npm packages:
+`npm install`
 
-## Learn More
+## Running the Application
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Start the Flask backend:
+- Ensure you're in the project root directory and your virtual environment is activated
+- Run the following command:
+`python app.py`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- The backend should start running on `http://localhost:5000`
 
-### Code Splitting
+2. Start the React frontend:
+- Open a new terminal window
+- Navigate to the project root directory
+- Run the following command:
+`npm start`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- The frontend should start running on `http://localhost:3000`
 
-### Analyzing the Bundle Size
+3. Open your web browser and go to `http://localhost:3000` to use the Hardware Shop Management System.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Usage
 
-### Making a Progressive Web App
+1. Log in using your username and password.
+2. The dashboard will display the current month's data.
+3. Use the various components to manage products, sales, purchases, and view reports:
+ - Dashboard
+ - Product List
+ - Product Form
+ - Purchase Form
+ - Purchase History
+ - Sales Form
+ - Low Stock Products
+ - Tax Management
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+4. Any actions such as selling a product, purchasing a product, or adding an item will immediately reflect in the dashboard.
+5. Products with stock quantities below the minimum stock level will be flagged as 'Low Stock'.
+6. The tax report will display the tax collected after a product is sold.
 
-### Advanced Configuration
+## Troubleshooting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- If you encounter any issues with database connections, double-check your credentials in `app.py`.
+- Make sure both the backend and frontend servers are running simultaneously.
+- Check the console logs in your browser and the terminal running the backend for any error messages.
 
-### Deployment
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Contributions are welcome. Please fork the repository and create a pull request with your changes.
 
-### `npm run build` fails to minify
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License.
